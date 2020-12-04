@@ -1,0 +1,22 @@
+[[cds]]
+    name = "CD1"
+    [[cds.tracks]]
+        name = "Track 01"
+        url = "xxx.mp3"
+    [[cds.tracks]]
+        name = "Track 02"
+        url = "xxx.mp3"
+    [[cds.tracks]]
+        name = "Track 03"
+        url = "xxx.mp3" 
+[[cds]]
+    name = "CD2"
+    [[cds.tracks]]
+        name = "Track 01"
+        url = "xxx.mp3"
+    [[cds.tracks]]
+        name = "Track 02"
+        url = "xxx.mp3"
+    [[cds.tracks]]
+        name = "Track 03"
+        url = "xxx.mp3" 
