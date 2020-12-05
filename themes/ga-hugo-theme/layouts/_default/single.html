@@ -15,14 +15,14 @@
           <div style="font-size:18px;">{{.Content}}</div>
      </div>
      {{$title := .Title}}
-     {{with (index .Site.Data .Title)}}
+     {{with (index .Site.Data .File.TranslationBaseName)}}
           {{range .cds}}
                <h3>{{.name}}</h3>
                {{range .tracks}}
                     {{$cdUrl := (print $title .name .url)}}
-                    <h3>{{.name}}</h3>
-                    <h3>{{.url}}</h3>
-                    <h3>{{base64Encode $cdUrl}}</h3>
+                    <h3>title: {{.name}}</h3>
+                    <h3>original: {{.url}}</h3>
+                    <h3>base64 encode: {{base64Encode $cdUrl}}</h3>
                {{end}}
           {{end}}
      {{end}}
