@@ -2,6 +2,6 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-url: {{md5 .File.TranslationBaseName}}
+url: {{hmac "sha1" "halin" .File.TranslationBaseName}}
 ---
 
