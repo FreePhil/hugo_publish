@@ -1,22 +1,16 @@
+publication = "ready4"
+urlPrefix = "https://s3.aws.com/"
+
 [[cds]]
-    name = "CD1"
+    cd = "CD1"
     [[cds.tracks]]
-        name = "Track 01"
-        url = "xxx.mp3"
-    [[cds.tracks]]
-        name = "Track 02"
-        url = "xxx.mp3"
-    [[cds.tracks]]
-        name = "Track 03"
-        url = "xxx.mp3" 
+        startTrack = 1
+        endTrack = 5
 [[cds]]
-    name = "CD2"
+    cd = "CD2"
     [[cds.tracks]]
-        name = "Track 01"
-        url = "xxx.mp3"
-    [[cds.tracks]]
-        name = "Track 02"
-        url = "xxx.mp3"
-    [[cds.tracks]]
-        name = "Track 03"
-        url = "xxx.mp3" 
+        startTrack = 1
+        endTrack = 5
+    [[cds.tracks]] 
+        startTrack = 7
+        endTrack = 10       

@@ -16,13 +16,18 @@
      </div>
      {{$title := .Title}}
      {{with (index .Site.Data .File.TranslationBaseName)}}
+          {{$prefix := .urlPrefix}}
+          {{$publication := .publication}}
           {{range .cds}}
-               <h3>{{.name}}</h3>
+               {{$cd := .cd}}
+               <h2 style="background-color: brown; color: white">{{.cd}}</h2>
                {{range .tracks}}
-                    {{$cdUrl := (print $title .name .url)}}
-                    <h3>title: {{.name}}</h3>
-                    <h3>original: {{.url}}</h3>
-                    <h3>base64 encode: {{base64Encode $cdUrl}}</h3>
+                    {{range $i, $sequence := (seq .startTrack .endTrack)}}
+                         <div style="background-color:bisque">
+                              <h3>title: {{printf "Track %02d" $sequence}}</h3>
+                              <h3>url: {{print $prefix $publication "-" $cd "-" (printf "track%02d" $sequence) ".mp3"}}</h3>
+                         </div>
+                    {{end}}
                {{end}}
           {{end}}
      {{end}}
